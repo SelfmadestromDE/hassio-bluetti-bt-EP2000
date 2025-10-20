@@ -17,6 +17,7 @@ from ..devices.ep500p import EP500P
 from ..devices.ep600 import EP600
 from ..devices.ep760 import EP760
 from ..devices.ep800 import EP800
+from ..devices.ep2000 import EP2000
 
 DEVICE_NAME_RE = re.compile(
     r"^(AC60|AC70|AC70P|AC180|AC180P|AC200L|AC200M|AC300|AC500|EB3A|EP500|EP500P|EP600|EP760|EP800)(\d+)$"
