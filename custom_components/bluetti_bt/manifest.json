@@ -14,7 +14,9 @@
         { "local_name": "EP600*" },
         { "local_name": "EP760*" },
         { "local_name": "EP800*" },
-        { "local_name": "PBOX*" }
+        { "local_name": "PBOX*" },
+        { "local_name": "EBOX*" },
+        { "local_name": "EP2000*" }
     ],
     "codeowners": ["@Patrick762"],
     "config_flow": true,
