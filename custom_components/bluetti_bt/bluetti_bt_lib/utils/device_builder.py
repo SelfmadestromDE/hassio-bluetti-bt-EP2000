@@ -56,6 +56,8 @@ def build_device(address: str, name: str):
         return EP760(address, match[2])
     if match[1] == "EP800":
         return EP800(address, match[2])
+    if match[1] == "EP2000":
+        return EP2000(address, match[2])
 
 
 def get_type_by_bt_name(bt_name: str):
