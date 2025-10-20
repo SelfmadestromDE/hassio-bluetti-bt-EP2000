@@ -55,14 +55,14 @@ class BluettiConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             }
 
         # Get device type if needed
-        if isinstance(discovery_info.name, str) and discovery_info.name.startswith("PBOX"):
+        if isinstance(discovery_info.name, str) and discovery_info.name.startswith("EBOX"):
             bleak_device = BleakClient(discovery_info.device)
             device_type = await recognize_device(bleak_device, self.hass.loop.create_future)
             _LOGGER.info("Device identified as %s", device_type)
             discovery_info.manufacturer_data = {
                 CONF_TYPE: device_type.strip(),
             }
-            discovery_info.name = discovery_info.name.replace("PBOX", device_type.strip())
+            discovery_info.name = discovery_info.name.replace("EBOX", device_type.strip())
 
         self._discovery_info = discovery_info
         self.context["title_placeholders"] = {"name": discovery_info.name}
